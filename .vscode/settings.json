@@ -1,0 +1,22 @@
+{
+  "[notebook]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "python.languageServer": "None",
+  "editor.formatOnSave": true,
+  "ruff.enable": true,
+  "ruff.lint.args": ["--unsafe-fixes"],
+  "notebook.codeActionsOnSave": {
+    "source.fixAll.ruff": "explicit",
+    "source.organizeImports.ruff": "explicit"
+  },
+  "python.analysis.typeCheckingMode": "off",
+  "ty.diagnosticMode": "workspace",
+  "ty.inlayHints.variableTypes": true,
+  "ty.inlayHints.callArgumentNames": true
+}

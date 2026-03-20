@@ -1,0 +1,54 @@
+line-length = 88
+indent-width = 4
+target-version = "py312"
+preview = true
+
+[format]
+indent-style = "space"
+quote-style = "double"
+docstring-code-format = true
+docstring-code-line-length = 88
+
+[lint]
+fixable = ["ALL"]
+select = [
+    "D",    # All pydocstyle errors
+    "E",    # All pycodestyle errors   
+    "F",    # All pyflakes errors
+    "I",    # All isort errors
+    "N",    # All flake8 naming errors
+    "Q",    # All flake8-quotes errors
+    "S",    # All security-related issues
+    "T",    # All flake8-bugbear errors
+    "W",    # All pycodestyle warnings
+    "A",    # All flake8 builtin hints (eg. variable shadowing python builtins)
+    "C4",   # flake8-comprehensions, checks for unnecessary list/set/dict comprehensions
+    "TC",   # flake8-type-checking, checks for type checking issues
+    "UP",   # pyupgrade, checks for syntax that can be updated to newer Python versions
+    "C90",  # mccabe complexity, checks for code complexity issues
+    "ARG",  # flake8-arguments, checks for issues with function arguments
+    "PTH",  # flake8 use pathlib
+    "COM",  # flake8-commas, checks for trailing commas and missing commas in lists, tuples, dicts, etc.
+    "ICN",  # import conventions
+    "PIE",  # flake8 redundant code, checks for redundant code patterns
+    "ANN",  # Missing type annotations
+    "RET",  # flake8 return, checks for implicit return None and inconsistent return statements
+    "PTH",  # PyTorch-specific linting rules
+    "PLW",  # General linting
+    "SLF",  # flake8 self, checks for access to private attributes and methods of other classes
+    "SIM",  # flake8 Simplify, checks for unnecessarily complex code that can be simplified
+    "BLE",  # Prevent using blind excepts 
+    "NPY",  # Numpy-specific linting rules
+    "RUF",  # General RUF rules
+    "PERF", # flake8 performance, checks for performance issues in code
+]
+ignore = [
+    "E501", # Line too long (handled by line-length)
+    "T201", # Dont complain about print statements (Its a scripting project)
+]
+
+[lint.per-file-ignores]
+"__init__.py" = [
+    "F401",
+    "D103",
+] # Ignore unused imports and missing docstrings in __init__.py files.
